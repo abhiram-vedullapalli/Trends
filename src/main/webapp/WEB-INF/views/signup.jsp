@@ -31,8 +31,8 @@
 <!-- Div for Registration and quote -->
 <div class="container-fluid " style="margin-top:10vh;margin-bottom: 10vh;">
 	<div class="row text-white">
-	
-			<div class="g-signin2 col-12" align="center"   data-onsuccess="onSignIn"></div>
+			
+			<div class="g-signin2 col-12" align="center"  data-onsuccess="onSignIn"></div>
 	</div>
 
 </div>
