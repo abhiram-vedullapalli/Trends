@@ -1,5 +1,7 @@
 package trends;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
@@ -19,7 +21,7 @@ public class MainController {
 	}
 	
 	@RequestMapping(value="/vote" , method = RequestMethod.POST)
-	public String vote(HttpServletRequest request) {
+	public String vote(HttpServletRequest request , Model model) {
 		String name = request.getParameter("username");
 		String state = request.getParameter("State");
 		String loksabha = request.getParameter("Loksabha");
@@ -27,6 +29,8 @@ public class MainController {
 		String assembly = request.getParameter("Assembly");
 		String mla = request.getParameter("MLA");
 		VoteDataBase.vote(name, state, loksabha, mp, assembly, mla);
+		List<Party> loksabhaTally = LoksabhaDB.loksabhaSeats();
+		model.addAttribute("Party", loksabhaTally);
 		return "homepage";
 	}
 	

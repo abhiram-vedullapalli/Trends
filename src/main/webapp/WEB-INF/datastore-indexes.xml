@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="true">
+<!-- Used 1 time in query history -->
+    <datastore-index kind="India" ancestor="false" source="auto">
+        <property name="NoOfSeats" direction="desc"/>
+        <property name="Party" direction="asc"/>
+    </datastore-index>
+</datastore-indexes>
